@@ -1,0 +1,7 @@
+﻿services:
+  apicharacters:
+    image: apicharacters
+    build:
+      context: .
+      dockerfile: APIcharacters/Dockerfile
+
