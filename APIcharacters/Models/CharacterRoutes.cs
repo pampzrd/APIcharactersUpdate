@@ -26,7 +26,7 @@ public static class CharacterRoutes
                 .AnyAsync(character => character.Name == request.name, ct);
             if (exists)
                 return Results.Conflict("Já existe esse personagem!");
-            var newCharacter = new Character(request.name);
+            var newCharacter = new Character(request.name,request.birthplace,request.preferences,request.age,request.goals,request.fears);
             await context.Characters.AddAsync(newCharacter, ct);
             await context.SaveChangesAsync(ct);
             var retornoCharacter = new CharacterDTO(newCharacter.Name,newCharacter.Birthplace,newCharacter.Preferences,newCharacter.Age,newCharacter.Goals,newCharacter.Fears);
@@ -40,7 +40,8 @@ public static class CharacterRoutes
                 .SingleOrDefaultAsync(character => character.Name == name, ct);
             if (characters == null)
                 return Results.NotFound();
-            characters.UpdateDescription(characters.Name,characters.Birthplace,characters.Preferences,characters.Age,characters.Goals,characters.Fears);
+
+            characters.UpdateDescription(request.name,request.birthplace,request.preferences,request.age,request.goals,request.fears);
             await context.SaveChangesAsync(ct);
             return Results.Ok(new CharacterDTO(characters.Name, characters.Birthplace, characters.Preferences,
                 characters.Age, characters.Goals, characters.Fears));
