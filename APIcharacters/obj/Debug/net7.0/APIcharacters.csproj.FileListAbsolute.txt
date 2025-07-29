@@ -67,3 +67,9 @@ C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\obj\Debug\net7.0\refint
 C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\obj\Debug\net7.0\APIcharacters.pdb
 C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\obj\Debug\net7.0\APIcharacters.genruntimeconfig.cache
 C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\obj\Debug\net7.0\ref\APIcharacters.dll
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\angular.json
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\package-lock.json
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\package.json
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\tsconfig.app.json
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\tsconfig.json
+C:\Users\JIANG\RiderProjects\APIcharacters\APIcharacters\bin\Debug\net7.0\CharactersFront\tsconfig.spec.json

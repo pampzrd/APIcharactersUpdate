@@ -8,7 +8,7 @@ public static class CharacterRoutes
     public static void CharactersRoutes(this WebApplication app)
     {
         var routesCharacters = app.MapGroup("characters");
-        app.MapGet("", async (AppDbContext context, CancellationToken ct) =>
+        routesCharacters.MapGet("", async (AppDbContext context, CancellationToken ct) =>
         {
             var characters = await context
                 .Characters
@@ -20,7 +20,7 @@ public static class CharacterRoutes
 
         });
 
-        app.MapPost("", async (AddCharacter request,AppDbContext context,CancellationToken ct) =>
+        routesCharacters.MapPost("", async (AddCharacter request,AppDbContext context,CancellationToken ct) =>
         {
             var exists = await context.Characters
                 .AnyAsync(character => character.Name == request.name, ct);
@@ -34,7 +34,7 @@ public static class CharacterRoutes
 
         });
 
-        app.MapPut("{name}", async (string name,UpdateCharacter request, AppDbContext context, CancellationToken ct) =>
+        routesCharacters.MapPut("{name}", async (string name,UpdateCharacter request, AppDbContext context, CancellationToken ct) =>
         {
             var characters = await context.Characters
                 .SingleOrDefaultAsync(character => character.Name == name, ct);
@@ -48,7 +48,7 @@ public static class CharacterRoutes
    
         });
 
-        app.MapDelete("{name}", async (string name,AppDbContext context,CancellationToken ct) =>
+        routesCharacters.MapDelete("{name}", async (string name,AppDbContext context,CancellationToken ct) =>
         {
             var characters = await context.Characters.SingleOrDefaultAsync(character => character.Name == name, ct);
             if(characters==null)

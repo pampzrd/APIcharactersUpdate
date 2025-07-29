@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size: 45pt;
+}
+button{
+  padding: 20px 30px;
+  background-color: brown;
+  color: floralwhite;
+  font-size: 15pt;
+}
