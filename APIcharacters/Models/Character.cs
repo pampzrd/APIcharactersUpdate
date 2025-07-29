@@ -16,8 +16,15 @@ public class Character
     public bool Active { get; set; }
 
     public DateTime CreatedDate { get; set; }
-    
-    public Character(string requestName) {}
+
+    public Character()
+    {
+        
+    }
+    public Character(string requestName)
+    {
+        Name = requestName;
+    }
 
     public Character(string name,string birthplace,string preferences,int age,string goals, string fears)
     {
